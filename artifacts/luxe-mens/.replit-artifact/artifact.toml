@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "LUXE MEN - Premium Men's Fashion"
+version = "1.0.0"
+id = "artifacts/luxe-mens"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24992
+
+[services.development]
+run = "pnpm --filter @workspace/luxe-mens run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/luxe-mens", "run", "build" ]
+publicDir = "artifacts/luxe-mens/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24992"
+BASE_PATH = "/"

@@ -1,0 +1,8 @@
+packages:
+  "framer-motion": "For premium smooth animations, page transitions, and 3D card tilt effects required by the luxury aesthetic."
+  "lucide-react": "For sleek, modern iconography across the application."
+
+notes:
+  - Frontend-only application using mocked data.
+  - Cart state managed via React Context to simulate e-commerce functionality.
+  - Using pure CSS and Framer Motion for the requested 3D mannequin and card tilt effects.
